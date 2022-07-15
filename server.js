@@ -47,7 +47,7 @@ app.post("/students/add", (req, res) => {
     data.addStudent(req.body).then(()=>{
       res.redirect("/students");
     });
-  });
+});
 
 app.get("/student/:studentNum", (req, res) => {
     data.getStudentByNum(req.params.studentNum).then((data) => {
@@ -81,4 +81,3 @@ data.initialize().then(function(){
 }).catch(function(err){
     console.log("unable to start server: " + err);
 });
-

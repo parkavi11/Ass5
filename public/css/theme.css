@@ -69,3 +69,48 @@ legend{
     
 }
 
+table, th, td {
+    width: 100%;
+}
+
+table.tutorialtable {
+    border: 1px solid black; 
+    border-collapse: collapse; 
+    width: 80%; 
+    height: 100px; 
+    margin-top: 20%;
+    margin-left: 15px;
+    float: left;
+    border-style: double;
+    background-image: -moz-linear-gradient();
+}
+
+table.assessmenttable {
+    border: 1px solid black; 
+    border-collapse: collapse; 
+    width: 50%; 
+    height: 100px; 
+    margin-left: 750px;
+    float: right;
+}
+
+table.assessmenttable tr.odd, table.tutorialtable tr.odd {
+    background-color: #96D4D4;
+}
+
+table.assessmenttable tr.even, table.tutorialtable tr.even {
+    background-color: #b3f6f6;
+}
+
+th.thstyle {
+    background-color: aqua;
+    border: 1px solid black; 
+}
+
+td.tdtable {
+    border: 1px solid black; 
+}
+
+td #tdwidth {
+    width: 100px;
+}
