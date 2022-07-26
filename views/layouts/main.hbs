@@ -3,20 +3,20 @@
 	<head>
 		<title>WEB700</title>
 		<meta charset="UTF-8" />
-		<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
-		<link href="../../public/css/theme.css" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">	
+		<link href="/css/theme.css" rel="stylesheet" type="text/css" />
 
 	</head>
 
 	<body>
-		{{!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
-			<a class="navbar-brand" href="#">Student Name</a>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			{{!-- <a class="navbar-brand" href="#">Student Name</a> --}}
+			{{!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button> --}}
 			
-			{{!-- <div class="collapse navbar-collapse" id="navbarSupportedContent">
-				<ul class="navbar-nav mr-auto"> --}}
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
 					{{!-- <li class="nav-item active"><a style="color: purple; size: 20px;" class="nav-link" href="/home">Home</a></li>
 					<li class="nav-item"><a style="color: purple;" class="nav-link" href="/about">About</a></li>
 					<li class="nav-item"><a style="color: purple;" class="nav-link" href="/htmlDemo">Html Demo</a></li>
@@ -27,16 +27,16 @@
                     {{#navLink "/students/add"}}Add Student{{/navLink}}
                     
 
-				{{!-- </ul>
-				<ul class="navbar-nav ml-auto"> --}}
+				</ul>
+				<ul class="navbar-nav ml-auto">
                     {{#navLink "/students"}}Students{{/navLink}}
 					{{#navLink "/courses"}}Courses{{/navLink}}
 					{{!-- <li class="nav-item"><a style="color: blue;" class="nav-link" href="/students">Students</a></li> --}}
 					{{!-- <li class="nav-item"><a style="color: blue;" class="nav-link" href="/tas">Teaching Assistants</a></li> --}}
 					{{!-- <li class="nav-item"><a style="color: blue;" class="nav-link" href="/courses">Courses</a></li> --}}
-				{{!-- </ul>
+				</ul>
 			</div>
-		</nav> --}}
+		</nav>
 
 		<div class="container">
 			{{{body}}}
