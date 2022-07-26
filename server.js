@@ -139,7 +139,7 @@ app.post("/students/add", (req, res) => {
 app.get("/student/:studentNum", (req, res) => {
     data.getStudentByNum(req.params.studentNum).then((student) => {
         // res.json(data);
-        res.render("students", {
+        res.render("student", {
             data: student,
             layout: "main"
         })
