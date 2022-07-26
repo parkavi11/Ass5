@@ -1,0 +1,42 @@
+<div class="row">
+    <div class="col-md-12">
+          <br>
+          <h2>Courses</h2>
+          <hr />
+
+          <p>TODO: render a list of all course id's and names here
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Course Code</th>
+                            <th>Course Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    {{#each data}}
+                        <tr>
+                            <td><a href="course/{{courseId}}"> {{courseCode}} 
+                                    <script>
+                                        getCourseById
+                                    </script>
+                                </a></td>
+                            <td>{{courseDescription}}</td>
+                        </tr>
+                    {{else}}
+                        <tr>
+                            <td colspan="4">No DATA AVAILABLE</td>
+                            {{!-- <div class="col-md-12 text-center">
+                                <strong>{{message}}</strong>
+                            </div> --}}
+
+                        </tr>
+                    {{/each}}
+                    </tbody>
+                </table>
+            </div>
+
+          </p>
+
+    </div>
+</div>

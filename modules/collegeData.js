@@ -84,6 +84,24 @@ module.exports.getStudentByNum = function (num) {
     });
 };
 
+module.exports.getCourseById = function (id) {
+    return new Promise(function (resolve, reject) {
+        var foundCourse = null;
+
+        for (let i = 0; i < dataCollection.courses.length; i++) {
+            if (dataCollection.courses[i].courseId == id) {
+                foundCourse = dataCollection.courses[i];
+            }
+        }
+
+        if (!foundCourse) {
+            reject("query returned 0 results"); return;
+        }
+
+        resolve(foundCourse);
+    });
+};
+
 module.exports.getStudentsByCourse = function (course) {
     return new Promise(function (resolve, reject) {
         var filteredStudents = [];
@@ -110,6 +128,45 @@ module.exports.addStudent = function (studentData) {
         dataCollection.students.push(studentData);
 
         resolve();
+    });
+
+};
+
+module.exports.updateStudent = function (studentData) {
+    return new Promise(function (resolve, reject) {
+        var filteredStudents = [];
+        var updateCount = 0
+
+        for (let i = 0; i < dataCollection.students.length; i++) {
+            if (dataCollection.students[i].studentNum = studentData.studentNum) {
+                updateCount++
+                dataCollection.students[i].firstName = studentData.firstName
+                dataCollection.students[i].lastName = studentData.lastName
+                dataCollection.students[i].email = studentData.email
+                dataCollection.students[i].addressStreet = studentData.addressStreet
+                dataCollection.students[i].addressCity = studentData.addressCity
+                dataCollection.students[i].addressProvince = studentData.addressProvince
+                dataCollection.students[i].TA = studentData.TA
+                dataCollection.students[i].status = studentData.status
+                dataCollection.students[i].course = studentData.course
+                console.log(dataCollection.students[i])
+                try {
+                    fs.writeFileSync('./data/students.json', JSON.stringify(dataCollection.students));
+                    console.log("JSON data is saved.");
+                } catch (error) {
+                    console.log(error);
+                }
+
+                
+            }
+        }
+
+        if (updateCount == 0) {
+            reject("No data to update")
+        } else {
+            resolve("Updated successfully")
+        }
+
     });
 
 };
